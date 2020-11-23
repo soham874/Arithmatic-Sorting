@@ -14,9 +14,11 @@ declare -A results
 for i in {2..5}
 do
 	results[$i]=`echo "$((res$i))"`
+	resultsarray[(($i-2))]=${results[$i]}
 done
 
-echo "Stored results are : "${results[@]}
+echo "Stored results in dictionary are : "${results[@]}
+echo "Stored results in array are : "${resultsarray[@]}
 
 echo "Result of a+b*c is $res2"
 echo "Result of a*b+c is $res3"
