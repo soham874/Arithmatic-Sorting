@@ -6,16 +6,16 @@ function bubblesort(){
 	do
 		for j in ${!arr[@]}
 		do
-			if [ ${arr[$i]} -gt ${arr[$j]} ]
+			if [ ${arr[$i]} -lt ${arr[$j]} ]
 			then
 				temp=${arr[$i]}
 				arr[$i]=${arr[$j]}
 				arr[$j]=$temp
 			fi
 		done
-	echo ${arr[@]}
+	#echo ${arr[@]}
 	done
-	echo "Sorted result array in descendin is : " ${arr[@]}
+	echo "Sorted result array in ascending is : " ${arr[@]}
 }
 
 read -p "Enter the number a : " a
